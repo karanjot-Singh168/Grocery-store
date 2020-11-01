@@ -1,0 +1,40 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap:2rem;
+    margin-top: 3rem;
+}
+.shipping{
+    justify-self: center;
+}
+.shipping h2 {
+    margin-bottom: 1.5rem;
+}
+.shipping input {
+    display: inline-block;
+    width:300px;
+    margin-bottom: 1rem;
+}
+.btn {
+    
+    background-color: black;
+    color:white;
+    padding:0.7rem 0.8rem;
+    cursor: pointer;
+}
+.order-summary{
+    justify-self: center;
+    align-self: center;
+    
+}
+.order-summary h2,.order-summary p{
+    padding: 0.6rem 0;
+}
+.place-order{
+    text-align: center;
+    margin-top: 2rem;
+}
+.danger{
+    color:red;
+    padding-bottom: 1rem;
+}

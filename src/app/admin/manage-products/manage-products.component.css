@@ -1,0 +1,14 @@
+table {
+    margin:0 auto;
+    
+}
+th{
+    text-align: left;
+}
+.btn{
+    padding: 0.5rem 0.6rem;
+    background: black;
+    color:white;
+}
+
+

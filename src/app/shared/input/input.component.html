@@ -1,0 +1,18 @@
+
+<label>{{label}}</label>
+
+    <div>
+        <input [min]="min" [formControl]="control" [type]="inputType" id="email">
+    </div>
+    <ng-container *ngIf="control.errors">
+        <p class="alert" *ngIf="control.errors.required && control.touched">
+        Value is required
+        </p>
+        <p class="alert" *ngIf="control.errors.pattern && control.touched">
+            Email format is incorrect
+            </p>
+            <p class="alert" *ngIf="control.errors.minlength && control.touched">
+                Password should be minimum 8 characters
+                </p>
+                </ng-container>
+

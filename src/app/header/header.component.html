@@ -1,0 +1,15 @@
+
+
+<ul class="main-menu">
+    <h2> <a routerLink="/products">Grocery Store</a> </h2>
+    <li><a routerLink="/products" routerLinkActive="active">All Products</a></li>
+    
+
+    <li *ngIf="!isSignedin"><a routerLink="./signin" routerLinkActive="active">SignIn</a></li>
+    <li *ngIf="!isSignedin"><a routerLink="./signup" routerLinkActive="active">SignUp</a></li>
+    <li *ngIf="isSignedin"><a routerLink="./signout" routerLinkActive="active" (click)="onSignOut()">SignOut</a></li>
+    <li *ngIf="isSignedin"><a routerLink="./cart" routerLinkActive="active" >Cart <i class="fas fa-shopping-cart"></i><span *ngIf="noOfCartItems">{{noOfCartItems}}</span></a></li>
+  <li *ngIf="isCheckOut"><a routerLink="./checkout" routerLinkActive="active">Checkout</a></li>
+  <li *ngIf="isPlaceOrder"><a routerLink="./place-order" routerLinkActive="active">Order Placed</a></li>
+  <li><a routerLink="./admin" routerLinkActive="active">Admin</a></li>
+</ul>

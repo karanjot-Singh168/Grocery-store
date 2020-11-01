@@ -1,0 +1,40 @@
+
+<form class="select" [formGroup]="categoryForm">
+<label for="category">Browse by Category:</label>
+
+<select formControlName="category" id="category">
+    
+    <option value="All Categories" selected>All Categories</option>
+  <option value="bread">bread</option>
+  <option value="fruits">fruits</option>
+  <option value="vegetables">vegetables</option>
+  <option value="pulses and beans">pulses and beans</option>
+</select>
+</form>
+
+
+
+
+
+
+
+<div class="container">
+    <div class="items" *ngFor="let product of products | paginate: { itemsPerPage: 7, currentPage: p };let i=index;">
+        <img [src]="product.imageUrl" alt="">
+        <p>{{product.name}}</p>
+        <p>{{product.price | currency}}</p>
+        <div *ngIf="addtoCart === i">
+<form #f="ngForm">
+    <label style="padding-right:1rem">Quantity</label>
+    <input name="quantity" type="number" min="1" required ngModel>
+
+<button [disabled]="f.invalid" (click)="buy(product,f)" type="button">Buy</button>
+</form>
+        </div>
+        <a class="btn" (click)="onAddtoCart(i)">Add to Cart</a>
+        
+       
+    </div>
+</div>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
+

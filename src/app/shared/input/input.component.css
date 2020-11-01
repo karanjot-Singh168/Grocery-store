@@ -1,0 +1,12 @@
+input {
+    display: inline-block;
+    width:500px;
+    padding-bottom: 0.4rem;
+}
+label{
+    display: inline-block;
+    padding-bottom: 0.8rem;
+}
+.alert {
+    color:red;
+}

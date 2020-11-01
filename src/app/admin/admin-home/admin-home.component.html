@@ -1,0 +1,38 @@
+<div class="container">
+
+    <div class="add">
+        <h2 style="margin-left: 6.7rem;">Add New Product</h2>
+        <form [formGroup]="addForm" (ngSubmit)="onSubmit(addForm)">
+            <app-input label="Name" [control]="addForm.get('name')" inputType="text"></app-input>
+            <app-input label="Category" [control]="addForm.get('category')" inputType="text"></app-input>
+            <app-input label="Price" [control]="addForm.get('price')" inputType="number" min="1"></app-input>
+            <app-input label="Image Url" [control]="addForm.get('imageUrl')" inputType="text"></app-input>
+            <div>
+                <img *ngIf="gotImage" [src]="image" alt="" style="width: 300px;height: 300px;margin-top: 1rem;">
+            </div>
+            <button *ngIf="!isEdit;else editMode" style="margin-top: 2rem;padding: 0.4rem 0.6rem;cursor: pointer;" [disabled]="addForm.invalid" class="btn" type="submit">Add Product</button>
+            <ng-template #editMode>
+            <button  (click)="onClickUpdate(addForm)" style="margin-top: 2rem;padding: 0.4rem 0.6rem;cursor: pointer;" [disabled]="addForm.invalid" class="btn" type="button">Update Product</button>
+        </ng-template>
+        </form>
+    </div>
+
+<nav>
+    <ul>
+        <li class="dropdown">Manage<i class="fas fa-caret-down"></i>
+<ul class="dropdown-content">
+    <li><a routerLink="./view-orders" routerLinkActive="active">View Orders</a></li>   
+    <hr>
+    <li><a routerLink="./manage-products" routerLinkActive="active">Manage Products</a></li>
+</ul>
+
+        </li>
+
+    </ul>
+</nav>
+
+</div>
+
+<div class="child">
+<router-outlet></router-outlet>
+</div>

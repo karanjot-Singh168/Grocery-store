@@ -1,0 +1,18 @@
+th{
+    text-align: left;
+}
+table {
+    margin: auto;
+}
+.btn {
+    color:white;
+    background-color: black;
+    padding: 0.5rem 0.6rem;
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+    margin-top: 1rem;
+    text-align: center;
+
+}

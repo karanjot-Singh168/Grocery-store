@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>Sign Up</h2>
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit(signupForm)">
+        <app-input label="Email" [control]="signupForm.get('email')" inputType="email"></app-input>
+        <app-input label="Password" [control]="signupForm.get('password')" inputType="password"></app-input>
+        <app-input label="Password Confirmation" [control]="signupForm.get('passwordConfirmation')" inputType="password"></app-input>
+<ng-container *ngIf="signupForm.errors">
+<p class="alert" *ngIf="signupForm.errors.passwordsDontMatch && signupForm.get('passwordConfirmation').touched">Password and Password Confrimation must match</p>
+</ng-container>
+
+<div class="alert" *ngIf="signupForm.errors">
+    <p *ngIf="signupForm.errors.unknownError"> 
+    Unknown error occured,please try after some time
+    </p>
+            </div>
+            
+        <button [disabled]="signupForm.invalid" type="submit">SignUp</button>
+        <button (click)="signupForm.reset()" type="reset">Reset</button>
+       
+    </form>
+    <p style="margin-top:0.8rem">Already have an account? <a (click)="onClick()" style="cursor: pointer;font-weight:bold;">Sign in</a></p>
+</div>

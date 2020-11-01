@@ -1,0 +1,39 @@
+.container{
+    margin-top: 3rem;
+    margin-left: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+nav {
+    justify-self: flex-end;
+    margin-right: 5rem;
+    width:130px;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+
+ul{
+    list-style: none;
+}
+.dropdown{
+    position: relative;
+}
+.dropdown-content{
+    display: none;
+}
+.dropdown-content li{
+    padding-top:0.5rem;
+    padding-bottom: 0.4rem;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+    position: absolute;
+}
+.child{
+    margin-top: 3rem;
+}
+.active{
+    font-weight: bold;
+}

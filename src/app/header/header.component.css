@@ -1,0 +1,16 @@
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+.main-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.active {
+    font-weight: bold;
+}
+

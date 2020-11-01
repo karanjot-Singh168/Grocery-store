@@ -1,0 +1,41 @@
+<div class="container" *ngIf="isOrderPlaced;else noOrdersPlaced">
+<h2 style="text-align: center;margin-top: 1rem;margin-bottom: 0.7rem;">Order details</h2>
+<table style="width:80%">
+    <tr>
+      <th>Product Name</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      
+      
+    </tr>
+    <tr *ngFor="let order of orderDetails;let i=index;">
+      <td>{{order.name}}</td>
+      <td>{{order.quantity}}</td>
+      <td>{{order.quantity * order.price | currency}}</td>
+      
+      
+    </tr>
+    
+    <tr>
+      <p style="text-align: end;margin-top: 0.8rem;">Amount Payable: {{totalPrice | currency}}</p>
+    </tr>
+    
+  </table>
+
+  
+
+  
+    <ul>
+      <h3>Shipping Address</h3>
+      <li>Customer name: {{shippingAdd.name}}</li>
+      <li>Shipping Address: {{shippingAdd.address}}</li>
+      <li>Phone number: {{shippingAdd.phone}}</li>
+    </ul>
+  
+</div>
+
+
+
+<ng-template #noOrdersPlaced>
+<p style="text-align: center;font-weight: bold;font-size: 2rem;">No Orders placed at the moment</p>
+</ng-template>

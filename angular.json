@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "grocery-store"
+    }
+  },
+  "defaultProject": "grocery-store",
+  "cli": {
+    "analytics": false
+  }
 }

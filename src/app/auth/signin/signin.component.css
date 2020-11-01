@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:2rem;
+}
+
+button{
+    display: inline-block;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    
+    
+    padding: 0.6rem 0.5rem;
+}
+.guest{
+text-align: center;
+margin-top: 1.2rem;
+}
+a.btn{
+    display: inline-block;
+    color:white;
+    background-color: black;
+    padding:0.7rem 0.8rem;
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+p{
+    margin-top: 1rem;
+}
+p a{
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    color:black;
+}
+.alert {
+    color:red;
+}
+
+
